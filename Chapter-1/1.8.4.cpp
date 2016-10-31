@@ -34,6 +34,7 @@ int main() {
 		}
 	} 
 	//Êä³ö
+	printf("the longest string is:");
 	for (int i=0; i<lenth[max_row_index]; i++) {
 		printf("%c",input[max_row_index][i]);
 	}

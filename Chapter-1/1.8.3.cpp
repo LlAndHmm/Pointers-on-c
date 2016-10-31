@@ -11,5 +11,4 @@ int main() {
 	checksum = checksum + a;
 	printf("\n");
 	printf("%d", checksum);
-	
 }
