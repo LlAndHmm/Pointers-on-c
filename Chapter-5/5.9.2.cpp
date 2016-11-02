@@ -19,8 +19,11 @@ int main() {
 		if(ch >= 65 && ch <= 90) {
 			upper_case_encrypt(ch);
 		}
-		if(ch >= 97 && ch <= 122) {
+		else if(ch >= 97 && ch <= 122) {
 			lower_case_encrypt(ch);
+		}
+		else {
+			printf("%c", ch);
 		}
 	}
 }
