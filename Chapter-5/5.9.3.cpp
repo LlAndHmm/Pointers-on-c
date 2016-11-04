@@ -1,11 +1,25 @@
-#include<stdio.h>
-//解题思路：先取反再加一最后把符号位置于 
-int reverse(int a) {
-	int result;
-	result = ~a + 1;
-	printf("stop"); 
+#include<stdio.h> 
+unsigned reverse(unsigned int value) {
+	unsigned int answer; 
+	unsigned int i;
+	
+	answer = 0;
+	
+	for(i = 1; i != 0; i <<= 1) {
+		/*
+		**将旧的answer左移一位，为下一位留下空间 
+		**如果value的最后一位是1，answer就与1进行or操作 
+		**然后将value右移至下一位 
+		*/
+		answer <<= 1;
+		if (value & 1) {
+			answer |= 1;
+		} 
+		value >>= 1;
+	}
+	return answer;
 }
 int main() {
-	int a = 25;
-	reverse(a);
+	unsigned value = 25;
+	printf("%u", reverse(value));
 }

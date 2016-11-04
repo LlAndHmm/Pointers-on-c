@@ -1,7 +1,7 @@
 #include<stdio.h>
 bool check(int n) {
 	int count = 0;
-	for (int i = 1; i <= n; i++) {
+	for (int i = 2; i <= n; i++) {
 		if ((n % i) == 0) {
 			count++;
 		}
@@ -14,7 +14,7 @@ bool check(int n) {
 	}
 }
 int main() {
-	for (int i = 1; i <= 100 ; i++) {
+	for (int i = 2; i <= 100 ; i++) {
 		if(check(i)) {
 			printf("%d ", i);
 		}
