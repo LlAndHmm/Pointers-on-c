@@ -17,5 +17,5 @@ int store_bit_field(int original_value,
 	return value_to_store;	
 }
 int main() {
-	printf("%x", store_bit_field(0xffff, 0x123, 13, 9));
+	printf("%x", store_bit_field(0xffff, 0x123, 15, 4));
 } 
